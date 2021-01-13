@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log(1)})();
+(()=>{"use strict";var e;e=document.querySelector(".popup-menu"),document.querySelector(".menu-button").addEventListener("click",(function(){e.style.display="flex"})),e.addEventListener("click",(function(t){var n=t.target;(n.matches(".close-menu-btn img")||n.matches(".scroll a"))&&(e.style.display="none")}))})();

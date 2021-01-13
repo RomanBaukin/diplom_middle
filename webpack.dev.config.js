@@ -13,7 +13,7 @@ module.exports = {
     open: true,
     port: 8080,
     hot: true,
-    writeToDisk: false,
+    writeToDisk: true,
   },
   module: {
     rules: [
