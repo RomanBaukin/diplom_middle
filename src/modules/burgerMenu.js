@@ -12,7 +12,7 @@ const burgerMenu = () => {
   popupMenu.addEventListener('click', (event) => {
     const target = event.target;
 
-    if (target.matches('.close-menu-btn img') || target.matches('.scroll a')) {
+    if (target.matches('.close-menu-btn img, .scroll a')) {
       popupMenu.style.display = 'none'; //при нажатии на крестик или любой пункт меню - меню закрывается
     }
   });
