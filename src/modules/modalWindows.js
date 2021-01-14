@@ -6,6 +6,8 @@ const modalWindows = () => {
     callbackForm = document.getElementById('callback_form'), //модальное окно с формой для обратного звонка
     gift = document.getElementById('gift'); //модальное окно с подарком
 
+  clubsList.style.display = 'none';
+
   document.addEventListener('click', (event) => {
     const target = event.target;
 
