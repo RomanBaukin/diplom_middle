@@ -3,6 +3,7 @@
 import burgerMenu from './modules/burgerMenu';
 import scrollingPage from './modules/scrollingPage';
 import modalWindows from './modules/modalWindows';
+import calculator from './modules/calculator';
 
 // Меню-бургер
 burgerMenu();
@@ -12,3 +13,6 @@ scrollingPage();
 
 //Модальные окна и выпадающие меню
 modalWindows();
+
+//Калькулятор абонементов
+calculator();

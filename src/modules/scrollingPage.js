@@ -15,7 +15,7 @@ const scrollingPage = () => {
         top: 0;
       `;
     } else {
-      topMenu.style.position = 'relative';
+      topMenu.style.position = 'static';
     }
 
     if (window.scrollY > 781) {
