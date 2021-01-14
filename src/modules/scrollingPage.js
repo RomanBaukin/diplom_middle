@@ -5,6 +5,8 @@ const scrollingPage = () => {
   const topMenu = document.querySelector('.top-menu'), //навигационное меню
     btnArrowUp = document.getElementById('totop'); //кнопка скроллинга страницы вверх
 
+  btnArrowUp.style.display = 'none'; //скрывает кнопку скроллинга вверх при обновлении страницы
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 187 && window.innerWidth < 768) {
       //меню-бургер при ширине окна меньше 768px и скролле страницы прилипает к верхней границе экрана
