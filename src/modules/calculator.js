@@ -12,7 +12,7 @@ const calculator = () => {
   let selectedClub = 'mozaika', //начальные данные для переменных при обновлении страницы
     selectedMonth = 0;
 
-  priceTotal.textContent = '0'; //начальный вывод цены при обновлении страницы
+  priceTotal.textContent = pricesClubs[selectedClub][selectedMonth]; //начальный вывод цены при обновлении страницы
 
   calculator.addEventListener('change', (event) => {
     //слушатель на изменения в калькуляторе
