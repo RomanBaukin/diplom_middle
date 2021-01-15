@@ -5,6 +5,7 @@ import scrollingPage from './modules/scrollingPage';
 import modalWindows from './modules/modalWindows';
 import gift from './modules/gift';
 import calculator from './modules/calculator';
+import mainSlider from './modules/mainSlider';
 
 // Меню-бургер
 burgerMenu();
@@ -20,3 +21,6 @@ gift();
 
 //Калькулятор абонементов
 calculator();
+
+//Главный слайдер
+mainSlider();
