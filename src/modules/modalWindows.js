@@ -3,9 +3,8 @@
 const modalWindows = () => {
   const clubsList = document.querySelector('.clubs-list ul'), //список тренажерных залов
     freeVisitForm = document.getElementById('free_visit_form'), //модальное окно с формой для записи на посещение
-    callbackForm = document.getElementById('callback_form'), //модальное окно с формой для обратного звонка
-    modalGift = document.getElementById('gift'), //модальное окно с подарком
-    gift = document.querySelector('.fixed-gift'); //блок с картинкой подарок
+    callbackForm = document.getElementById('callback_form'); //модальное окно с формой для обратного звонка
+
   clubsList.style.display = 'none';
 
   document.addEventListener('click', (event) => {
@@ -33,15 +32,6 @@ const modalWindows = () => {
     } else if (target.matches('.overlay, .close_icon')) {
       // при клике на подложку или крестик - модальное окно закрывается
       callbackForm.style.display = 'none';
-    }
-
-    if (target.matches('.fixed-gift img')) {
-      // при клике на кнопку с подарком открывается модальное окно, а сам подарок исчезает
-      modalGift.style.display = 'block';
-      gift.style.display = 'none';
-    } else if (target.matches('.overlay, .close_icon, .close-btn')) {
-      // при клике на подложку или крестик - модальное окно закрывается
-      modalGift.style.display = 'none';
     }
   });
 };
