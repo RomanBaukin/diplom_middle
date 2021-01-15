@@ -6,6 +6,7 @@ import modalWindows from './modules/modalWindows';
 import gift from './modules/gift';
 import calculator from './modules/calculator';
 import mainSlider from './modules/mainSlider';
+import gallerySlider from './modules/gallerySlider';
 
 // Меню-бургер
 burgerMenu();
@@ -24,3 +25,6 @@ calculator();
 
 //Главный слайдер
 mainSlider();
+
+//Слайдер фотогаллереи
+gallerySlider();

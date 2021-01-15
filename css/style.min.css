@@ -1202,7 +1202,7 @@ nav.popup-menu .close-menu-btn img {
 .slider-dots li {
   float: left;
 }
-.slider-dots li button {
+.slider-dots li {
   width: 22px;
   height: 4px;
   background-color: #fff;
@@ -1210,8 +1210,9 @@ nav.popup-menu .close-menu-btn img {
   border-radius: 2px;
   color: transparent;
   margin-right: 5px;
+  cursor: pointer;
 }
-.slider-dots li.slick-active button {
+.slider-dots li.slick-active {
   background-color: #ffd11a;
 }
 #clubs {
@@ -1384,6 +1385,7 @@ nav.popup-menu .close-menu-btn img {
   background: url(../images/gallery-bg.png) left center no-repeat;
 }
 #gallery .gallery-slider {
+  position: relative;
   padding-left: 75px;
   padding-right: 75px;
   max-width: 900px;
