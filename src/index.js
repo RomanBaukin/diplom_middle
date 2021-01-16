@@ -7,6 +7,7 @@ import gift from './modules/gift';
 import calculator from './modules/calculator';
 import mainSlider from './modules/mainSlider';
 import gallerySlider from './modules/gallerySlider';
+import carousel from './modules/sliderCarousel';
 
 // Меню-бургер
 burgerMenu();
@@ -28,3 +29,6 @@ mainSlider();
 
 //Слайдер фотогаллереи
 gallerySlider();
+
+//Слайдер карусель
+carousel.init();

@@ -1356,14 +1356,17 @@ nav.popup-menu .close-menu-btn img {
   max-width: 200px;
   margin: 0 auto;
 }
-.services-slider .slider-arrow {
+#services-wrapper {
+  position: relative;
+}
+#services .wrapper .slider-arrow {
   position: absolute;
-  top: 75px;
+  top: 50%;
   margin-top: -18px;
   z-index: 100;
   cursor: pointer;
 }
-.services-slider .slider-arrow span {
+#services .wrapper .slider-arrow span {
   display: block;
   width: 36px;
   height: 37px;
@@ -1372,10 +1375,10 @@ nav.popup-menu .close-menu-btn img {
   text-align: center;
   padding-top: 11px;
 }
-.services-slider .slider-arrow.prev {
+#services .wrapper .slider-arrow.prev {
   left: 2px;
 }
-.services-slider .slider-arrow.next {
+#services .wrapper .slider-arrow.next {
   right: 2px;
 }
 #gallery {
