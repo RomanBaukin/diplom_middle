@@ -155,7 +155,11 @@ const sendForm = () => {
               alertBlock.textContent = '';
             }, 3000);
             return;
-          } else if (elem.type === 'text' && (elem.value.length < 2 || elem.value.length > 50)) {
+          } else if (
+            elem.type === 'text' &&
+            elem.id !== 'promocode' &&
+            (elem.value.length < 2 || elem.value.length > 50)
+          ) {
             alertBlock.textContent = 'Имя должно состоять как минимум из 2-х символов, максимум 50';
             setTimeout(() => {
               alertBlock.textContent = '';
