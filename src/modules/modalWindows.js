@@ -3,7 +3,8 @@
 const modalWindows = () => {
   const clubsList = document.querySelector('.clubs-list ul'), //список тренажерных залов
     freeVisitForm = document.getElementById('free_visit_form'), //модальное окно с формой для записи на посещение
-    callbackForm = document.getElementById('callback_form'); //модальное окно с формой для обратного звонка
+    callbackForm = document.getElementById('callback_form'), //модальное окно с формой для обратного звонка
+    thanksBlock = document.getElementById('thanks');
 
   clubsList.style.display = 'none';
 
@@ -26,12 +27,13 @@ const modalWindows = () => {
       freeVisitForm.style.display = 'none';
     }
 
-    if (target.matches('.callback-btn')) {
+    if (target.matches('.right>.call>.callback-btn')) {
       // при клике на кнопку "перезвоните мне" открывается модальное окно
       callbackForm.style.display = 'block';
-    } else if (target.matches('.overlay, .close_icon')) {
+    } else if (target.matches('.overlay, .close_icon, .close-btn')) {
       // при клике на подложку или крестик - модальное окно закрывается
       callbackForm.style.display = 'none';
+      thanksBlock.style.display = 'none';
     }
   });
 };

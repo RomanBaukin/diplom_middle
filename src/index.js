@@ -8,6 +8,8 @@ import calculator from './modules/calculator';
 import mainSlider from './modules/mainSlider';
 import gallerySlider from './modules/gallerySlider';
 import carousel from './modules/sliderCarousel';
+import maskPhone from './modules/maskPhone';
+import sendForm from './modules/sendForm';
 
 // Меню-бургер
 burgerMenu();
@@ -32,3 +34,9 @@ gallerySlider();
 
 //Слайдер карусель
 carousel.init();
+
+//Маска для инпутов с телефоном
+maskPhone('[name=phone]');
+
+//Отправка форм
+sendForm();
