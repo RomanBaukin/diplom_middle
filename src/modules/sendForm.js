@@ -116,7 +116,12 @@ const sendForm = () => {
     form = document.querySelectorAll('form'),
     input = document.querySelectorAll('form input'),
     inputLetoMozaika = document.getElementById('footer_leto_mozaika'),
-    inputLetoShelkovo = document.getElementById('footer_leto_schelkovo');
+    inputLetoShelkovo = document.getElementById('footer_leto_schelkovo'),
+    clearAlertBlock = () => {
+      setTimeout(() => {
+        alertBlock.textContent = '';
+      }, 3000);
+    };
 
   alertBlock.style.cssText = `
     color: red;
@@ -128,7 +133,7 @@ const sendForm = () => {
     item.addEventListener('input', (event) => {
       const target = event.target;
 
-      if (target.matches('[name=name]')) {
+      if (target.matches('[name=name]') && target.id !== 'promocode') {
         target.value = target.value.replace(/[^а-яё\s]/gi, '');
       }
     });
@@ -145,15 +150,11 @@ const sendForm = () => {
         for (const elem of target.elements) {
           if (elem.type === 'checkbox' && !elem.checked) {
             alertBlock.textContent = 'Пожалуйста, подтвердите согласие на обработку персональных данных';
-            setTimeout(() => {
-              alertBlock.textContent = '';
-            }, 3000);
+            clearAlertBlock();
             return;
           } else if (elem.type === 'tel' && elem.value.length < 18) {
             alertBlock.textContent = 'Введите полный номер телефона';
-            setTimeout(() => {
-              alertBlock.textContent = '';
-            }, 3000);
+            clearAlertBlock();
             return;
           } else if (
             elem.type === 'text' &&
@@ -161,26 +162,20 @@ const sendForm = () => {
             (elem.value.length < 2 || elem.value.length > 50)
           ) {
             alertBlock.textContent = 'Имя должно состоять как минимум из 2-х символов, максимум 50';
-            setTimeout(() => {
-              alertBlock.textContent = '';
-            }, 3000);
+            clearAlertBlock();
             return;
           }
         }
       } else {
         if (!inputLetoMozaika.checked && !inputLetoShelkovo.checked) {
           alertBlock.textContent = 'Пожалуйста, выберите клуб';
-          setTimeout(() => {
-            alertBlock.textContent = '';
-          }, 3000);
+          clearAlertBlock();
           return;
         } else {
           for (const elem of target.elements) {
             if (elem.type === 'tel' && elem.value.length < 18) {
               alertBlock.textContent = 'Введите полный номер телефона';
-              setTimeout(() => {
-                alertBlock.textContent = '';
-              }, 3000);
+              clearAlertBlock();
               return;
             }
           }
