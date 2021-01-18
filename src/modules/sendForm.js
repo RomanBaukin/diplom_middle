@@ -194,7 +194,9 @@ const sendForm = () => {
 
         const outputData = () => {
           input.forEach((item) => {
-            item.value = '';
+            if (item.id !== 'footer_leto_schelkovo' && item.id !== 'footer_leto_mozaika') {
+              item.value = '';
+            }
           });
           message.textContent = successMessage;
           const statusMessageRemove = () => {
